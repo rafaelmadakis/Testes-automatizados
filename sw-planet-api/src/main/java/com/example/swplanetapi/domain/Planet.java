@@ -1,6 +1,7 @@
 package com.example.swplanetapi.domain;
 
 
+import com.example.swplanetapi.jacoco.ExcludeFromJacocoGeneratedReport;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -87,5 +88,16 @@ public class Planet {
   @Override
   public boolean equals(Object obj) {
     return  EqualsBuilder.reflectionEquals(obj, this);
+  }
+
+  @ExcludeFromJacocoGeneratedReport
+  @Override
+  public String toString() {
+    return "Planet{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", climate='" + climate + '\'' +
+        ", terrain='" + terrain + '\'' +
+        '}';
   }
 }
